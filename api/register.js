@@ -24,7 +24,6 @@ export default async function handler(req, res) {
       user: "u51_MHnAX6uJAz",
       password: "plG8BR!zf=yz28.eZTtol+Zw",
       database: "s51_Vallmorra",
-      ssl: { rejectUnauthorized: false }
     });
 
     const [rows] = await conn.execute('SELECT * FROM ucp WHERE ucp_name = ?', [nama]);
