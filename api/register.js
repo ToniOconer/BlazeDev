@@ -23,7 +23,8 @@ export default async function handler(req, res) {
       host: "159.65.7.144",
       user: "u51_MHnAX6uJAz",
       password: "plG8BR!zf=yz28.eZTtol+Zw",
-      database: "s51_Vallmorra",
+      database: "s51_Vallmorra"
+      // HAPUS ssl: {...}
     });
 
     const [rows] = await conn.execute('SELECT * FROM ucp WHERE ucp_name = ?', [nama]);
@@ -47,4 +48,4 @@ export default async function handler(req, res) {
     console.error("[REGISTER ERROR]", err);
     return res.status(500).send("Terjadi kesalahan pada server: " + err.message);
   }
-}
+      }
